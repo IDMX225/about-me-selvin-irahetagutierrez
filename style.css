@@ -1,0 +1,27 @@
+header{
+    font-family: "Raleway", system-ui;    
+    background-color: #F0F0FE;
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+body{
+    font-family: "Raleway", sans-serif;
+    text-align: center;
+
+}
+.imageLOGO{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+.introduction{
+    font-size: 2rem;
+}
+.bio{
+    font-size: 1.5rem;
+}
+.birdimage{
+    width: 5%;
+}
