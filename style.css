@@ -16,6 +16,11 @@ body{
     margin-right: auto;
     width: 20%;
 }
+h2{
+    display: flex; 
+flex-direction: column; 
+align-items: center;
+}
 .introduction{
     font-size: 2rem;
 }
@@ -34,11 +39,98 @@ figure{
     margin-right: auto;
 }
 .hobbyimages{
-    max-width: 60%;
-    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px; 
 }
 .article{
     text-align: center;
     font-size: 1rem;
     padding: 5%;
+}
+.photo {
+    display: flex;
+    flex-direction: column;
+}
+.caption {
+    padding: 8px;
+    text-align: center; /* Center the caption text */
+}
+
+img {
+    width: 100%; /* Ensure images fill the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Media query for tablet sizes */
+@media screen and (min-width: 60em) {
+    .hobbyimages {
+        grid-template-columns: 2fr 1fr; /* 2:1 ratio for images and captions */
+        gap: 16px; /* Adjust spacing as necessary */
+    }
+
+    figcaption {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        font-size: 2rem; 
+        margin-left: 1rem; 
+        background-color: rgba(255, 255, 255, 0.8); 
+        padding: 8px; 
+        border-radius: 4px; 
+    }
+}
+@media screen and (min-width: 60em) {
+
+    #lit {
+        max-width: 100%; 
+        columns: 40rem;  
+        column-gap: 16px; 
+    }
+}
+.drop-cap {
+    font-size: 3rem; 
+    float: left; 
+    line-height: 1; 
+    margin-right: 0.1em; 
+}
+
+@media screen and (min-width: 60em) {
+    #lit {
+        max-width: 100%; 
+        columns: 40rem;  
+        column-gap: 16px;
+    }
+
+    .drop-cap {
+    }
+
+    .article p:first-child .drop-cap {
+        display: block; 
+    }
+
+    .article p:not(:first-child) .drop-cap {
+        display: none; 
+    }
+}
+@media screen and (min-width: 100em) {
+    #gallery {
+        display: grid; /* Use grid layout */
+        grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
+        gap: 16px; /* Adjust spacing as needed */
+    }
+
+    h2 {
+        grid-column: 1 / -1; /* Title spans all columns */
+        text-align: center; /* Center align the title */
+    }
+
+    .photo {
+        display: block; /* Reset figure to block to fix captions */
+    }
+
+    /* Optional: Hide extra horizontal rules if needed */
+    hr {
+        display: none; /* Hide horizontal rules */
+    }
 }
