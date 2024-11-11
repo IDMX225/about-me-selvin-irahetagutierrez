@@ -10,6 +10,9 @@ body{
     text-align: center;
 
 }
+.title-main{
+    color: #333;
+}
 .imageLOGO{
     display: block;
     margin-left: auto;
