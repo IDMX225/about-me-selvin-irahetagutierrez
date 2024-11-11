@@ -21,7 +21,7 @@ main{
 
 /* navbar */
 .navbar{
-    background-color: #333;
+    background-color: #F0F0FE;
     color:whitesmoke;
     display: flex;
     flex-direction: column;
@@ -59,7 +59,7 @@ main{
 */
 
 .navbar-links a {
-    color:whitesmoke;
+    color:rgb(71, 71, 71);
     background-attachment: #333;
     font-size: 1.5rem;
     padding: 1rem 1.25rem;
@@ -67,7 +67,14 @@ main{
     text-decoration: none;
     display: inline-block;
 }
+.navbar-links a:hover,
+.navbar-links a:focus{
+color:#333;
+background-color: whitesmoke;
+border-radius: 10px;
+outline:none;
 
+}
 
 
 /* 
@@ -75,3 +82,13 @@ media query for non-mobile nav bar
 min-width set to width of nav elements 
 such that no text wraps 
 */
+@media screen and (min-width:60rem){
+    .navbar{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .navbar ul{
+        display: flex;
+        justify-content: space-between;
+    }
+}
